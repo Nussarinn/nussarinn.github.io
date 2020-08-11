@@ -3,33 +3,34 @@ html {
 }
 body {
     margin: 0;
-    background-image: linear-gradient(rgb(204, 12, 12), rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(204, 12, 12), rgb(255, 255, 255));
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 .days {
     border: black 1px solid;
     margin: 1em 2em; /* top + bottom / left + right */
     font-size: 2em;
     padding: .4em 0;
-    background-color: gray;
+    background-color: black;
     border-radius: .3em;
     display: grid;
     grid-template-rows: .5fr ;
     text-decoration: none;
-    color: black ;
+    color: white ;
 }
 .choice {
     border: black 1px solid;
     margin: 0; /* top + bottom / left + right */
     font-size: 2em;
     padding: .4em .4em;
-    background-color: gray;
+    background-color: black;
     display: inline-block;
     text-decoration: none;
     border-radius: .3em;
-    color: black ;
+    color: white;
 }
 .home {
     background-color: green;
