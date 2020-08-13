@@ -12,24 +12,61 @@
     <h1>Hendur</h1>
     <a class="choice" href="#1">Æfingar</a>
     <a class="choice" href="#2">Teyjur</a>
-    <section id="1">
-        <h2>Dumbbell Curl</h2>
-        <img src="media/Dumbbell-Alternate-Biceps-Curl.jpg" alt="Dumbbell Curl">
-        <h2>Dumbbell Hammer Curl</h2>
-        <img src="media/Dumbbell-Hammer-Curl.jpg" alt="Dumbbell Hammer Curl">
-        <h2>Seated Curl</h2>
-        <img src="media/seated-curl.jpg" alt="Seated Curl">
-        <h2>Cable Curl</h2>
-        <img src="media/cable-curl.jpg" alt="Cable Curl">
-        <h2>Push Down</h2>
-        <img src="media/push-down.jpg" alt="Push Down">
-        <h2>One Arm Push Down</h2>
-        <img src="media/one-arm-pushdown.jpg" alt="One Arm Push Down">
-        <h2>Skull Crusher</h2>
-        <img src="media/Barbell-skull-crusher.jpg" alt="Skull Crusher">
+    <section id="1" class="row">
+        <a class="collapsible"><h3>Dumbbell Curl</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Biceps</p>
+            <img src="media/Dumbbell-Alternate-Biceps-Curl.jpg" alt="Dumbbell Curl">
+        </div>
+        <a class="collapsible"><h3>Dumbbell Hammer Curl</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Biceps</p>
+            <img src="media/Dumbbell-Hammer-Curl.jpg" alt="Dumbbell Hammer Curl">
+        </div>
+        <a class="collapsible"><h3>Seated Curl</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Biceps</p>
+            <img src="media/seated-curl.jpg" alt="Seated Curl">
+        </div>
+        <a class="collapsible"><h3>Cable Curl</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Biceps</p>
+            <img src="media/cable-curl.jpg" alt="Cable Curl">
+        </div>
+        <a class="collapsible"><h3>Push Down</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Triceps</p>
+            <img src="media/push-down.jpg" alt="Push Down">
+        </div>
+        <a class="collapsible"><h3>One Arm Push Down</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Triceps</p>
+            <img src="media/one-arm-pushdown.jpg" alt="One Arm Push Down">
+        </div>
+        <a class="collapsible"><h3>Skull Crusher</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Triceps</p>
+            <img src="media/Barbell-skull-crusher.jpg" alt="Skull Crusher">
+        </div>
     </section>
-    <section id="2">
+    <section id="2" class="row">
        
     </section>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
 </body>
 </html>

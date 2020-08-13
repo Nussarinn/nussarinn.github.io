@@ -31,6 +31,7 @@ body {
     text-decoration: none;
     border-radius: .3em;
     color: white;
+    margin-bottom: .2em;
 }
 .home {
     background-color: green;
@@ -45,23 +46,35 @@ body {
 img {
     max-width: 95%;
 }
-.yta {
-    border: black 1px solid;
-    margin: 1em 2em; /* top + bottom / left + right */
-    font-size: 2em;
-    padding: .4em 0;
-    background-color: gray;
-    border-radius: .3em;
+.row {
     display: grid;
     grid-template-rows: .5fr ;
-    text-decoration: none;
-    color: white ;
 }
-.yta a :active {
-    text-decoration: none;
+h3 {
+    display: inline-block;
+    margin: 0;
 }
-.yta a :hover {
-    text-decoration: none;
+.collapsible {
+    font-size: 1.2em;
+    padding: .8em 0;
+    text-align: left;
+    padding-left: 2em;
+}
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: .9em;
+    color: black;
+    margin-left: 1em;
+    float: right;
+    margin-right: 2em;
+}
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 .logo {
     margin-top: 1em;
@@ -69,6 +82,7 @@ img {
 h1 {
     font-size: 3em;
     margin-top: 0;
+    margin-bottom: .2em;
 }
 h2 {
     margin-bottom: 0;

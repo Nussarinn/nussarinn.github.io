@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="1.css">
+    <link rel="icon" type="image/ico" href="media/logo.png">
     <title>Fimmtudagur</title>
 </head>
 <body>
-    <a class="home" href="index.html">Gym Test</a>
+    <a href="index.html"><img src="media/home.png" alt="logo" class="logo"></a>
+    <h1>Bak</h1>
+    <a class="choice" href="#1">Æfingar</a>
+    <a class="choice" href="#2">Teyjur</a>
+    <section id="1" class="row">
+        <a class="collapsible"><h3>Deadlift</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Mjóbak, glutes</p>
+            <img src="media/deadlift.jpg" alt="Deadlift">
+        </div>
+        <a class="collapsible"><h3>Hyperextension</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Mjóbak</p>
+            <img src="media/hyperextension.jpg" alt="Hyperextension">
+        </div>
+        <a class="collapsible"><h3>Superman</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Mjóbak</p>
+            <img src="media/superman.jpg" alt="Superman">
+        </div>
+        <a class="collapsible"><h3>Lat Pulldown</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Lats</p>
+            <img src="media/lat-pulldown.jpg" alt="Lat Pulldown">
+        </div>
+        <a class="collapsible"><h3>Close Grip Pulldown</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Lats</p>
+            <img src="media/close-grip-pulldown.jpg" alt="Close Grip Pulldown">
+        </div>
+        <a class="collapsible"><h3>Seated cable row</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Lats, efra bak</p>
+            <img src="media/cable-row.jpg" alt="Seated cable row">
+        </div>
+        <a class="collapsible"><h3>One Arm Row</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Lats, efra bak</p>
+            <img src="media/one-arm-row.jpg" alt="One Arm Row">
+        </div>
+        <a class="collapsible"><h3></h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong></p>
+            <img src="" alt="">
+        </div>
+    </section>
+    <section id="2" class="row">
+        <a class="collapsible"><h3>Teyjur</h3></a>
+        <div class="content">
+            <p>404</p>
+        </div>
+    </section>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
 </body>
 </html>
