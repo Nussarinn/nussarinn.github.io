@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <link rel="icon" type="image/ico" href="media/logo.png">
+    <title>Þriðjudagur</title>
+</head>
+<body>
+    <a href="index.html"><img src="media/home.png" alt="logo" class="logo"></a>
+    <h1>Axlir</h1>
+    <a class="choice" href="#1">Æfingar</a>
+    <a class="choice" href="#2">Teyjur</a>
+    <section id="1" class="row">
+        <a class="collapsible"><h3>Military Press</h3></a>
+        <div class="content">
+            <img src="media/barbell-military-press.jpg" alt="Military Press">
+        </div>
+        <a class="collapsible"><h3>Shoulder Rotation</h3></a>
+        <div class="content">
+            <img src="media/Cable-Shoulder-External-Rotation.jpg" alt="Shoulder Rotation">
+        </div>
+        <a class="collapsible"><h3>Lateral Raise</h3></a>
+        <div class="content">
+            <img src="media/dumbbell-lateral-raise.jpg" alt="Lateral Raise">
+        </div>
+        <a class="collapsible"><h3>Front Raise</h3></a>
+        <div class="content">
+            <img src="media/Alternating-dumbbell-front-raise.jpg" alt="Front Raise">
+        </div>
+        <a class="collapsible"><h3>Seated Raise</h3></a>
+        <div class="content">
+            <img src="media/seated-raise.jpg" alt="Seated Raise">
+        </div>
+        <a class="collapsible"><h3>Overhead Press</h3></a>
+        <div class="content">
+            <img src="media/overhead-press.jpg" alt="Overhead Press">
+        </div>
+        <a class="collapsible"><h3>Face Pull</h3></a>
+        <div class="content">
+            <img src="media/Face-pull.jpg" alt="Face Pull">
+        </div>
+        <a class="collapsible"><h3>Shrugs</h3></a>
+        <div class="content">
+            <img src="media/dumbbell-shrug.jpg" alt="Shrugs">
+        </div>
+    </section>
+    <br>
+    <section id="2" class="row">
+        <a class="collapsible"><h3>Teyjur</h3></a>
+        <div class="content">
+            <img src="media/shoulder-stretch1.jpg" alt="Shoulder Pull Stretch">
+            <img src="media/shoulder-stretch2.jpg" alt="Wall shoulder Stretch">
+        </div>
+    </section>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+</body>
+</html>
