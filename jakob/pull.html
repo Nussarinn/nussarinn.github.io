@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <link rel="icon" type="image/ico" href="media/logo.png">
+    <title>Pull</title>
+</head>
+<body>
+    <a href="index.html"><img src="media/home.png" alt="logo" class="logo"></a>
+    <h1>Pull</h1>
+    <a class="choice" href="#1">Æfingar</a>
+    <a class="choice" href="#2">Teyjur</a>
+    <section id="1" class="row">
+        <a class="collapsible"><h3>Deadlift</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Mjóbak, glutes</p>
+            <img src="media/deadlift.jpg" alt="Deadlift">
+        </div>
+        <a class="collapsible"><h3>Dumbbell Row</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Efra bak</p>
+            <img src="media/dumbbell-row.jpg" alt="Dumbbell Row">
+        </div>
+        <a class="collapsible"><h3>Lat Pullover</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Lats</p>
+            <img src="media/lat-pullover.jpg" alt="Lat Pullover">
+        </div>
+        <a class="collapsible"><h3>Face Pull</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Efra bak</p>
+            <img src="media/Face-pull.jpg" alt="Face Pull">
+        </div>
+        <a class="collapsible"><h3>Dumbbell Curl</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Long head, short head</p>
+            <img src="media/Dumbbell-Alternate-Biceps-Curl.jpg" alt="Dumbbell Curl">
+        </div>
+        <a class="collapsible"><h3>Incline Curl</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Long head</p>
+            <img src="media/seated-curl.jpg" alt="Seated Curl">
+        </div>
+        <a class="collapsible"><h3>Concentracion Curl</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Short head</p>
+            <P><strong>MUNA SNÚNING Í ÆFINGU, MYND SÝNIR HANN EKKI</strong></P>
+            <img src="media/concentration-curl.jfif" alt="Concentracion Curl">
+        </div>
+        <a class="collapsible"><h3>Seated Raise</h3></a>
+        <div class="content">
+            <p><strong>Vöðvar: </strong>Rear deltoids</p>
+            <img src="media/seated-raise.jpg" alt="Seated Raise">
+        </div>
+    </section>
+    <br>
+    <section id="2" class="row">
+        <a class="collapsible"><h3>Teyjur</h3></a>
+            <div class="content">
+                <img src="media/shoulder-stretch1.jpg" alt="Shoulder Pull Stretch">
+            </div>
+    </section>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+</body>
+</html>

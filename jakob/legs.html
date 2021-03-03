@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <link rel="icon" type="image/ico" href="media/logo.png">
+    <title>Miðvikudagur</title>
+</head>
+<body>
+    <a href="index.html"><img src="media/home.png" alt="logo" class="logo"></a>
+    <h1>Fætur</h1>
+    <a class="choice" href="#1">Æfingar</a>
+    <a class="choice" href="#2">Teyjur</a>
+    <section id="1" class="row">
+        <a class="collapsible"><h3>Back Squat</h3></a>
+        <div class="content">
+          <p><strong>Vöðvar: </strong>Glutes, quads</p>
+            <img src="media/back-squat.jpg" alt="Back Squat">
+        </div>
+        <a class="collapsible"><h3>Barbell Hip Thrust</h3></a>
+        <div class="content">
+          <p><strong>Vöðvar: </strong>Glutes</p>
+            <img src="media/hip-thrust.jpg" alt="Barbell hip thrust">
+        </div>
+        <a class="collapsible"><h3>Split Squat</h3></a>
+        <div class="content">
+          <p><strong>Vöðvar: </strong>Quads</p>
+            <img src="media/split-squat.jpg" alt="Split Squat">
+        </div>
+        <a class="collapsible"><h3>Standing Calf Raise</h3></a>
+        <div class="content">
+          <p><strong>Vöðvar: </strong>Soleus</p>
+          <p><strong>GERA Í TRÖPPUM</strong></p>
+            <img src="media/standing-calf.jpg" alt="Standing Calf Raise">
+        </div>
+    </section>
+    <br>
+    <section id="2" class="row">
+      <a class="collapsible"><h3>Teyjur</h3></a>
+      <div class="content">
+          <img src="media/legstretch1.jpg" alt="Leg stretch">
+          <img src="media/legstretch2.jpg" alt="Leg stretch">
+          <img src="media/legstretch3.jpg" alt="Leg stretch">
+          <img src="media/legstretch4.jpg" alt="Leg stretch">
+          <img src="media/legstretch5.jpg" alt="Leg stretch">
+      </div>
+    </section>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+</body>
+</html>
