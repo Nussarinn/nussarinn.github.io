@@ -87,12 +87,56 @@ h1 {
 h2 {
     margin-bottom: 0;
 }
+.login {
+    text-decoration: none;
+    color: white;
+    border-radius: .3em;
+    padding: .8em;
+    background-color: black;
+    position: relative;
+    float: right;
+    margin: .6em 6em;
+}
+@media screen and (max-width: 42em) {
+    .login {
+        position: absolute;
+        right: 400em;
+    }
+}
 @media screen and (min-width: 48em) {
     body {
-        max-width: 60em;
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    .header {
+        border: 0 solid black;
+        background-color: rgb(182, 182, 182);
+        margin: 0;
+        border-bottom: 1px solid black;
+    }
+    .logo {
+        float: left;
+        max-width: 7em;
+        margin: .4em 6em;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .days {
-        font-size: 2em;
-        background-color: yellow;
+        padding: 1em .5em;
+        font-size: 3em;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .row {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    .content {
+        text-align: center;
+    }
+    .content img {
+        max-width: 40em;
+        max-height: 40em;
     }
 }
